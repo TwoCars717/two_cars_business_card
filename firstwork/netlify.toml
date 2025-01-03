@@ -5,7 +5,10 @@
 
 [[plugins]]
 package = "@netlify/plugin-angular-universal"
-inputs = { projectName = "firstwork" }
+
+[[plugins]]
+package = "@netlify/angular-runtime"
+origin = "ui"
 
 [[redirects]]
   from = "/*"
