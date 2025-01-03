@@ -3,13 +3,6 @@
   functions = "netlify/functions"
   publish = "dist/firstwork/browser"
 
-[[plugins]]
-package = "@netlify/plugin-angular-universal"
-
-[[plugins]]
-package = "@netlify/angular-runtime"
-origin = "ui"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
