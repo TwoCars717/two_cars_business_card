@@ -1,7 +1,10 @@
 [build]
-  command = "npm run build"
+  command = "npm run build:ssr"
   functions = "netlify/functions"
   publish = "dist/firstwork/browser"
+
+[[plugins]]
+package = "@netlify/plugin-angular-universal"
 
 [[redirects]]
   from = "/*"

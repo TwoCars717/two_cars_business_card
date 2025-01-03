@@ -7,8 +7,11 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng build && ng run firstwork:server",
-    "serve:ssr": "node dist/firstwork/server/server.mjs"
+    "prerender": "ng run firstwork:prerender",
+    "dev:ssr": "ng run firstwork:serve-ssr",
+    "build:ssr-prod": "ng build --configuration production && ng run firstwork:server",
+    "build:ssr": "ng build --configuration development && ng run firstwork:server",
+    "server:ssr": "node dist/firstwork/server/server.mjs"
   },
   "private": true,
   "dependencies": {
