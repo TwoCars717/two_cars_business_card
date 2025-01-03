@@ -5,6 +5,7 @@
 
 [[plugins]]
 package = "@netlify/plugin-angular-universal"
+inputs = { projectName = "firstwork" }
 
 [[redirects]]
   from = "/*"
