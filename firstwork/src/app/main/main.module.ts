@@ -18,6 +18,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { LoaderComponent } from './loader/loader.component';
 import { YouTubeMediaPlayerComponent } from './you-tube-media-player/you-tube-media-player.component';
 import { SafeUrlPipe } from './safe-url.pipe';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { SafeUrlPipe } from './safe-url.pipe';
     VgOverlayPlayModule,
     VgBufferingModule,
     ReactiveFormsModule,
+    RouterModule
   ],
   exports: [
     MainComponent,

@@ -1,0 +1,256 @@
+<div
+  class="w-[100vw] h-[100vh] bg-[#000000] flex flex-col items-center justify-center"
+>
+  @if (ticketStatus == 'RECIEVED') {
+  <div @swapAnimation class="flex flex-col items-center justify-center">
+    <svg
+      width="180px"
+      height="180px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M8.5 12.5L10.5 14.5L15.5 9.5"
+          stroke="#3EF8F5"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></path>
+        <path
+          d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+          stroke="#3EF8F5"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        ></path>
+      </g>
+    </svg>
+    <span class="text-5xl my-6 text-white font-extrabold text-center"
+      >Заявку залишено!</span
+    >
+    <h4 class="text-xl my-4 text-white text-center">
+      Невдовзі наш спеціаліст зв'яжеться з вами
+    </h4>
+  </div>
+  } @if(ticketStatus == 'NOTRECIEVED') {
+  <div @swapAnimation class="flex flex-col items-center justify-center">
+    <svg
+      width="200px"
+      height="200px"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      stroke="#ff0000"
+    >
+      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        <path
+          d="M14.5 9.50002L9.5 14.5M9.49998 9.5L14.5 14.5"
+          stroke="#ff0000"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        ></path>
+        <path
+          d="M7 3.33782C8.47087 2.48697 10.1786 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 10.1786 2.48697 8.47087 3.33782 7"
+          stroke="#ff0000"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        ></path>
+      </g>
+    </svg>
+    <span
+      class="text-3xl sm:text-5xl my-6 text-white font-extrabold text-center"
+      >Не вдалось залишити заявку</span
+    >
+    <h4 class="text-xl my-4 text-white text-center">
+      Зараз ми не змогли надіслати вашу заявку, але ви завжди можете
+      зателефонувати нам!
+    </h4>
+    <div class="flex justify-center flex-row gap-2">
+      <div>
+        <svg
+          class="w-6 h-6"
+          viewBox="0 0 22 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M20.8881 15.9201V18.9201C20.8892 19.1986 20.8322 19.4743 20.7206 19.7294C20.6091 19.9846 20.4454 20.2137 20.2402 20.402C20.035 20.5902 19.7927 20.7336 19.5289 20.8228C19.265 20.912 18.9855 20.9452 18.7081 20.9201C15.631 20.5857 12.6751 19.5342 10.0781 17.8501C7.66194 16.3148 5.61345 14.2663 4.07812 11.8501C2.38809 9.2413 1.33636 6.27109 1.00812 3.1801C0.983127 2.90356 1.01599 2.62486 1.10462 2.36172C1.19324 2.09859 1.33569 1.85679 1.52288 1.65172C1.71008 1.44665 1.93792 1.28281 2.19191 1.17062C2.44589 1.05843 2.72046 1.00036 2.99812 1.0001H5.99812C6.48342 0.995321 6.95391 1.16718 7.32188 1.48363C7.68985 1.80008 7.93019 2.23954 7.99812 2.7201C8.12474 3.68016 8.35957 4.62282 8.69812 5.5301C8.83266 5.88802 8.86178 6.27701 8.78202 6.65098C8.70227 7.02494 8.51698 7.36821 8.24812 7.6401L6.97812 8.9101C8.40167 11.4136 10.4746 13.4865 12.9781 14.9101L14.2481 13.6401C14.52 13.3712 14.8633 13.1859 15.2372 13.1062C15.6112 13.0264 16.0002 13.0556 16.3581 13.1901C17.2654 13.5286 18.2081 13.7635 19.1681 13.8901C19.6539 13.9586 20.0975 14.2033 20.4146 14.5776C20.7318 14.9519 20.9003 15.4297 20.8881 15.9201Z"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M12.938 1.00012C14.9763 1.21489 16.8802 2.11892 18.3349 3.5627C19.7895 5.00648 20.7079 6.90353 20.938 8.94012"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+          <path
+            d="M12.938 5.00012C13.9215 5.19406 14.824 5.67915 15.5284 6.39243C16.2327 7.10571 16.7064 8.01425 16.888 9.00012"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          ></path>
+        </svg>
+      </div>
+      <div>
+        <a
+          href="tel:+380667729243"
+          class="text-white text-xl leading-3 group relative"
+        >
+          <span class="group-hover:text-[#3ef8f5] transition-colors"
+            >+380667729243
+          </span>
+          <span
+            class="absolute bottom-0 left-0 w-full h-[2px] bg-[#3ef8f5] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 blur-[0.5px] shadow-[0_0_8px_#3ef8f5]"
+          ></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  }
+  <!--SOCIAL MEDIA-->
+  <div
+    class="sm:flex sm:flex-row grid grid-cols-2 my-8 gap-[4rem] justify-center"
+  >
+    <!-- Facebook icon -->
+    <a
+      href="https://www.facebook.com/profile.php?id=61568452884276"
+      class="w-8 h-8 group"
+    >
+      <svg
+        viewBox="-5 0 20 20"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <title>facebook [#176]</title>
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <g
+            id="Page-1"
+            stroke="none"
+            stroke-width="1"
+            fill="none"
+            fill-rule="evenodd"
+          >
+            <g
+              id="Dribbble-Light-Preview"
+              transform="translate(-385.000000, -7399.000000)"
+            >
+              <g id="icons" transform="translate(56.000000, 160.000000)">
+                <path
+                  class="fill-white group-hover:fill-[#3ef8f5] transition-colors"
+                  d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z"
+                  id="facebook-[#176]"
+                ></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <!-- Telegram icon -->
+    <a href="https://t.me/tw0cars" class="w-8 h-8 group">
+      <svg
+        class="fill-white group-hover:fill-[#3ef8f5] transition-colors"
+        version="1.1"
+        id="Capa_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 189.473 189.473"
+        xml:space="preserve"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <path
+              d="M152.531,179.476c-1.48,0-2.95-0.438-4.211-1.293l-47.641-32.316l-25.552,18.386c-2.004,1.441-4.587,1.804-6.914,0.972 c-2.324-0.834-4.089-2.759-4.719-5.146l-12.83-48.622L4.821,93.928c-2.886-1.104-4.8-3.865-4.821-6.955 c-0.021-3.09,1.855-5.877,4.727-7.02l174.312-69.36c0.791-0.336,1.628-0.53,2.472-0.582c0.302-0.018,0.605-0.018,0.906-0.001 c1.748,0.104,3.465,0.816,4.805,2.13c0.139,0.136,0.271,0.275,0.396,0.42c1.11,1.268,1.72,2.814,1.835,4.389 c0.028,0.396,0.026,0.797-0.009,1.198c-0.024,0.286-0.065,0.571-0.123,0.854L159.898,173.38c-0.473,2.48-2.161,4.556-4.493,5.523 C154.48,179.287,153.503,179.476,152.531,179.476z M104.862,130.579l42.437,28.785L170.193,39.24l-82.687,79.566l17.156,11.638 C104.731,130.487,104.797,130.533,104.862,130.579z M69.535,124.178l5.682,21.53l12.242-8.809l-16.03-10.874 C70.684,125.521,70.046,124.893,69.535,124.178z M28.136,86.782l31.478,12.035c2.255,0.862,3.957,2.758,4.573,5.092l3.992,15.129 c0.183-1.745,0.974-3.387,2.259-4.624L149.227,38.6L28.136,86.782z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <!-- Instagram icon  -->
+    <a href="https://www.instagram.com/two_cars_" class="w-8 h-8 group">
+      <svg
+        class="fill-white group-hover:fill-[#3ef8f5] transition-colors"
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 169.063 169.063"
+        xml:space="preserve"
+      >
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        ></g>
+        <g id="SVGRepo_iconCarrier">
+          <g>
+            <path
+              d="M122.406,0H46.654C20.929,0,0,20.93,0,46.655v75.752c0,25.726,20.929,46.655,46.654,46.655h75.752 c25.727,0,46.656-20.93,46.656-46.655V46.655C169.063,20.93,148.133,0,122.406,0z M154.063,122.407 c0,17.455-14.201,31.655-31.656,31.655H46.654C29.2,154.063,15,139.862,15,122.407V46.655C15,29.201,29.2,15,46.654,15h75.752 c17.455,0,31.656,14.201,31.656,31.655V122.407z"
+            ></path>
+            <path
+              d="M84.531,40.97c-24.021,0-43.563,19.542-43.563,43.563c0,24.02,19.542,43.561,43.563,43.561s43.563-19.541,43.563-43.561 C128.094,60.512,108.552,40.97,84.531,40.97z M84.531,113.093c-15.749,0-28.563-12.812-28.563-28.561 c0-15.75,12.813-28.563,28.563-28.563s28.563,12.813,28.563,28.563C113.094,100.281,100.28,113.093,84.531,113.093z"
+            ></path>
+            <path
+              d="M129.921,28.251c-2.89,0-5.729,1.17-7.77,3.22c-2.051,2.04-3.23,4.88-3.23,7.78c0,2.891,1.18,5.73,3.23,7.78 c2.04,2.04,4.88,3.22,7.77,3.22c2.9,0,5.73-1.18,7.78-3.22c2.05-2.05,3.22-4.89,3.22-7.78c0-2.9-1.17-5.74-3.22-7.78 C135.661,29.421,132.821,28.251,129.921,28.251z"
+            ></path>
+          </g>
+        </g>
+      </svg>
+    </a>
+    <!-- Tiktok icon  -->
+    <a href="https://www.tiktok.com/@twocars51" class="w-8 h-8 group">
+      <svg
+        class="fill-white group-hover:fill-[#3ef8f5] transition-colors"
+        width="32px"
+        height="32px"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          d="M448 209.9a210.1 210.1 0 0 1 -122.8-39.3V349.4A162.6 162.6 0 1 1 185 188.3V278.2a74.6 74.6 0 1 0 52.2 71.2V0l88 0a121.2 121.2 0 0 0 1.9 22.2h0A122.2 122.2 0 0 0 381 102.4a121.4 121.4 0 0 0 67 20.1z"
+        />
+      </svg>
+    </a>
+  </div>
+  <!--REDIRECT BACK-->
+  <button
+    routerLink="/"
+    class="appearance-none my-4 text-xl font-medium text-white border-white border-2 p-2 px-3 transition-all duration-500 hover:px-12 hover:bg-[#3EF8F5] hover:text-[#000000] hover:border-[#000000] rounded"
+  >
+    Повернутися на сторінку
+  </button>
+</div>

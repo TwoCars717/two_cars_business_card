@@ -3,6 +3,7 @@ import { MainService } from './main.service';
 import { catchError, throwError } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 import { TicketStatus } from './models/ticketStatus';
 import { carListing } from './store/carListing'
 import { Car } from './models/car';
@@ -27,7 +28,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   showOverlay = true;
   private refreshTimeout: any;
 
-  constructor(private mainService: MainService) {
+  constructor(private mainService: MainService, private router: Router) {
 
   }
 
@@ -187,8 +188,15 @@ export class MainComponent implements OnInit, AfterViewInit {
             .subscribe({
               next: (response) => {
                 this.ticketStatus = TicketStatus.Recieved;
+                this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
+              },
+              error: () => {
+                this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
               }
             });
+        },
+        error: () => {
+          this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
         }
       });
   }
