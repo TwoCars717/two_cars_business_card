@@ -7,7 +7,7 @@ import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 })
 export class HeroSectionComponent implements OnInit {
   @ViewChild('videoElement') videoElement!: ElementRef<HTMLVideoElement>;
-  
+
   isVideoLoaded = false;
   videoSrc = 'assets/videos/Audi.mp4';
   placeholderImage = 'assets/images/Audi1img.jpg';
