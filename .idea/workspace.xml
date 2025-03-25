@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3577f9c3-24d2-4091-88bd-70ecda5db07b" name="Changes" comment="" />
+    <list default="true" id="3577f9c3-24d2-4091-88bd-70ecda5db07b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/firstwork/public/assets/images/quickly-car-select-bg.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/footer/footer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,21 +26,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "reeditor-git"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;reeditor-git&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/TwoCars717/two_cars_business_card.git",
-    "accountId": "3e83c965-d35c-420e-9b10-65dd8114b341"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/TwoCars717/two_cars_business_card.git&quot;,
+    &quot;accountId&quot;: &quot;3e83c965-d35c-420e-9b10-65dd8114b341&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2r82cTP6og68bGJNpG4jQPrxLGl" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -38,6 +51,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/reeditor/WebstormProjects/two_cars_business_card/firstwork/public/assets/images",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -47,6 +61,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\reeditor\WebstormProjects\two_cars_business_card\firstwork\public\assets\images" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -63,10 +82,33 @@
       <option name="presentableId" value="Default" />
       <updated>1735926465588</updated>
       <workItem from="1735926472236" duration="6049000" />
+      <workItem from="1742572197731" duration="1428000" />
+      <workItem from="1742750325778" duration="2737000" />
+      <workItem from="1742762315422" duration="8084000" />
+      <workItem from="1742812912795" duration="15773000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/firstwork/src/app/main/contact-us/contact-us.component.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/firstwork/src/app/main/main.component.ts</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/firstwork/src/app/main/main.service.ts</url>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

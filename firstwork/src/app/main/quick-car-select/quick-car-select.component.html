@@ -1,0 +1,116 @@
+<div class="md:container md:mx-auto mx-6 flex flex-col lg:flex-row bg-[#272727] rounded-lg shadow-lg overflow-hidden border-2 border-[#3ef8f5]">
+  <!-- Ліва частина (Зображення автомобіля) -->
+  <div class="w-full lg:w-1/3 w-1/1">
+    <img src="assets/images/quickly-car-select-bg.jpg" alt="Автомобіль" class="w-full h-full object-cover max-h-max">
+  </div>
+
+  <!-- Права частина (Форма) -->
+  <div class="w-full flex flex-col justify-evenly lg:w-2/3 w-1/1 p-6">
+    <h2 class="text-2xl font-bold text-white mb-4 uppercase">Швидкий підбір автомобіля</h2>
+    <form id="contact-form flex flex-row" [formGroup]="carForm" (ngSubmit)="onSubmit()">
+
+      <div class="w-full w-1/2 flex flex-row gap-2 flex-wrap lg:flex-nowrap">
+        <!-- Тип кузова -->
+        <div class="mb-4 w-full lg:w-1/3 w-1/1">
+          <label for="bodyType" class="block text-sm font-medium text-white">Тип кузова</label>
+          <select id="bodyType" name="bodyType" formControlName="bodyType"
+                  class="w-full mt-2 p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none">
+            <option value="" disabled selected>Оберіть тип кузова</option>
+            <option *ngFor="let type of bodyTypes" [value]="type.value">{{ type.label }}</option>
+          </select>
+          <div *ngIf="bodyTypeControl?.invalid && bodyTypeControl?.touched" class="text-red-500">
+            Будь ласка, оберіть тип кузова
+          </div>
+        </div>
+
+        <!-- Діапазон ціни -->
+        <div class="mb-4 w-full lg:w-1/3">
+          <label class="block text-sm font-medium text-white">Ціна $</label>
+          <div class="flex gap-2 mt-2">
+            <!-- Мінімальна ціна -->
+            <div class="w-1/2">
+              <input type="number" id="priceMin" name="priceMin" placeholder="Від" min="0" max="100000"
+                     step="100" formControlName="priceMin"
+                     class="w-full p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none" />
+              <div *ngIf="priceMinControl?.invalid && priceMinControl?.touched" class="text-red-500 text-sm mt-1">
+                Мінімальна ціна повинна бути не менше 1000$
+              </div>
+            </div>
+
+            <!-- Максимальна ціна -->
+            <div class="w-1/2">
+              <input type="number" id="priceMax" name="priceMax" placeholder="До" min="0" max="100000"
+                     step="100" formControlName="priceMax"
+                     class="w-full p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none" />
+              <div *ngIf="priceMaxControl?.invalid && priceMaxControl?.touched" class="text-red-500 text-sm mt-1">
+                Максимальна ціна повинна бути не більше 100.000$
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Діапазон року випуску -->
+        <div class="mb-4 w-full lg:w-1/3">
+          <label class="block text-sm font-medium text-white">Рік випуску</label>
+          <div class="flex gap-2 mt-2">
+            <!-- Мінімальний рік -->
+            <div class="w-1/2">
+              <input type="number" id="yearMin" name="yearMin" placeholder="Від" min="1980"
+                     [max]="currentYear" step="1" formControlName="yearMin"
+                     class="w-full p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none" />
+              <div *ngIf="yearMinControl?.invalid && yearMinControl?.touched" class="text-red-500 text-sm mt-1">
+                Рік повинен бути не раніше 1980
+              </div>
+            </div>
+
+            <!-- Максимальний рік -->
+            <div class="w-1/2">
+              <input type="number" id="yearMax" name="yearMax" placeholder="До" min="1990"
+                     [max]="currentYear" step="1" formControlName="yearMax"
+                     class="w-full p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none" />
+              <div *ngIf="yearMaxControl?.invalid && yearMaxControl?.touched" class="text-red-500 text-sm mt-1">
+                Рік повинен бути не пізніше {{ currentYear }}
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w-full w-1/2 flex flex-row gap-2 flex-wrap lg:flex-nowrap">
+        <!-- Ім'я -->
+        <div class="mb-4 w-full lg:w-1/3 w-1/1">
+          <label for="name" class="block text-sm font-medium text-white">Ім'я</label>
+          <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" formControlName="name"
+                 class="w-full mt-2 p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none"
+                 required />
+          <div *ngIf="nameControl?.invalid && nameControl?.touched" class="text-red-500">
+            <div *ngIf="nameControl?.errors?.['required']">Ім'я обов'язкове</div>
+            <div *ngIf="nameControl?.errors?.['minlength']">Ім'я повинно містити щонайменше 2 символи
+            </div>
+          </div>
+        </div>
+
+        <!-- Номер телефону -->
+        <div class="mb-4 w-full lg:w-1/3 w-1/1">
+          <label for="phone" class="block text-sm font-medium text-white">Номер телефону</label>
+          <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" formControlName="phone"
+                 class="w-full mt-2 p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none"
+                 required />
+          <div *ngIf="phoneControl?.invalid && phoneControl?.touched" class="text-red-500">
+            Введіть коректний український номер телефону у форматі +380XXXXXXXXX
+          </div>
+        </div>
+
+        <!-- Кнопка відправки -->
+        <div class="mb-4 mt-7 w-full lg:w-1/3 w-1/1">
+          <button type="submit" (click)="onTouchStart($event)"
+                  class="w-full py-2 rounded-lg text-[#3EF8F5] font-semibold border-[1px] border-[#3EF8F5] hover:bg-[#3EF8F5] hover:text-black">
+            Надіслати заявку
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

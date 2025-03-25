@@ -50,7 +50,7 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   animateBox() {
-    gsap.from('#stages-of-working .text-center', { 
+    gsap.from('#stages-of-working .text-center', {
       x:40,
       scale: 0.5,
       y:200,
@@ -80,7 +80,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       y: 275,
       ease: 'power4.inOut',
       scrollTrigger: {
-        trigger: '#purchased-cars', 
+        trigger: '#purchased-cars',
         start: 'top 110%',
         end: 'top 50%',
         scrub: 1,
@@ -93,7 +93,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       x: -10,
       ease: 'power4.inOut',
       scrollTrigger: {
-        trigger: '#services-overview', 
+        trigger: '#services-overview',
         start: 'top 16%',
         end: 'top 4%',
         scrub: 1,
@@ -105,7 +105,7 @@ export class MainComponent implements OnInit, AfterViewInit {
       x: '100vw',
       ease: 'power3',
       scrollTrigger: {
-        trigger: '#services-overview', 
+        trigger: '#services-overview',
         start: 'top 80%',
         end: 'top 40%',
         scrub: 1,
@@ -117,19 +117,19 @@ export class MainComponent implements OnInit, AfterViewInit {
       y: -200,
       ease: 'power4.inOut',
       scrollTrigger: {
-        trigger: '#contact-us', 
+        trigger: '#contact-us',
         start: 'top 80%',
         end: 'top 20%',
         scrub: 1,
       }
     });
 
-    
+
     gsap.from('#contact-us', {
       y: 200,
       ease: 'power4.inOut',
       scrollTrigger: {
-        trigger: '#contact-us', 
+        trigger: '#contact-us',
         start: 'top 140%',
         end: 'top 40%',
         scrub: 1,
@@ -147,7 +147,7 @@ export class MainComponent implements OnInit, AfterViewInit {
     const newItems = this.carListing.slice(nextIndex, nextIndex + this.itemsPerClick);
 
     this.displayedItems = [...this.displayedItems, ...newItems];
-    
+
     // Refresh ScrollTrigger with debounce
     this.refreshTimeout = setTimeout(() => ScrollTrigger.refresh(), 100);
   }
@@ -159,6 +159,62 @@ export class MainComponent implements OnInit, AfterViewInit {
         catchError((error: HttpErrorResponse) => {
           // Handle the error and log it
             console.error('Error occurred while submitting ticket:', error);
+          this.ticketStatus = TicketStatus.NotSent;
+
+          // Optionally show a message to the user here, if needed
+          // this.toastrService.error('Failed to submit ticket');
+
+          // Re-throw the error so it can be handled further up if needed
+          return throwError(() => new Error('Failed to submit ticket'));
+        })
+      )
+      .subscribe({
+        next: (response) => {
+          // Handle successful response
+          this.mainService.assignTicketToAdminUser(response.data.orderId)
+            .pipe(
+              catchError((error: HttpErrorResponse) => {
+                // Handle the error and log it
+                // console.error('Error occurred while assigning ticket admin user:', error);
+                this.ticketStatus = TicketStatus.NotSent;
+
+
+                // Optionally show a message to the user here, if needed
+                // this.toastrService.error('Failed to submit ticket');
+
+                // Re-throw the error so it can be handled further up if needed
+                return throwError(() => new Error('Failed to assign ticket to admin user'));
+              }))
+            .subscribe({
+              next: (response) => {
+                this.ticketStatus = TicketStatus.Recieved;
+                this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
+              },
+              error: () => {
+                this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
+              }
+            });
+        },
+        error: () => {
+          this.router.navigate(['/confirmation'], { queryParams: { status: this.ticketStatus } });
+        }
+      });
+  }
+
+  submitCarTicketToCrm(formGroup: FormGroup) {
+    this.ticketStatus = TicketStatus.Pending;
+    this.mainService.submitCarTicketToCrm(
+      formGroup.value.name,
+      formGroup.value.phone,
+      formGroup.value.bodyType,
+      formGroup.value.priceMin,
+      formGroup.value.priceMax,
+      formGroup.value.yearMin,
+      formGroup.value.yearMax)
+      .pipe(
+        catchError((error: HttpErrorResponse) => {
+          // Handle the error and log it
+          console.error('Error occurred while submitting ticket:', error);
           this.ticketStatus = TicketStatus.NotSent;
 
           // Optionally show a message to the user here, if needed

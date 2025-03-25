@@ -19,10 +19,12 @@ import { LoaderComponent } from './loader/loader.component';
 import { YouTubeMediaPlayerComponent } from './you-tube-media-player/you-tube-media-player.component';
 import { SafeUrlPipe } from './safe-url.pipe';
 import { RouterModule } from '@angular/router';
+import { QuickCarSelectComponent } from './quick-car-select/quick-car-select.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [MainComponent, HeaderComponent, FooterComponent, CarouselCustomerComponent, ServicesOverviewComponent, PurchasedCarsGridComponent, SingleMediaPlayerComponent, StagesOfWorkingComponent, HeroSectionComponent, ContactUsComponent, LoaderComponent, YouTubeMediaPlayerComponent, SafeUrlPipe],
+  declarations: [MainComponent, HeaderComponent, FooterComponent, CarouselCustomerComponent, ServicesOverviewComponent, PurchasedCarsGridComponent, SingleMediaPlayerComponent, StagesOfWorkingComponent, HeroSectionComponent, ContactUsComponent, LoaderComponent, YouTubeMediaPlayerComponent, SafeUrlPipe, QuickCarSelectComponent],
   imports: [
     CommonModule,
     VgCoreModule,
@@ -30,7 +32,8 @@ import { RouterModule } from '@angular/router';
     VgOverlayPlayModule,
     VgBufferingModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     MainComponent,

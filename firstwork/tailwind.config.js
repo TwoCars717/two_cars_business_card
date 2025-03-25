@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        mint: '#4ecca3',
+        black: '#000000',
+      },
       animation:{
         glow: 'glow 2s ease-in-out infinite',
       },
