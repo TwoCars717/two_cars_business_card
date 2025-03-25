@@ -46,9 +46,9 @@ export class MainService {
       form: environment.crmApikey,
       fName: name,
       phone: phone,
+      comment: comment,
       prodex24source: "Веб-сайт TWOCARS",
       getResultData: 1,
-      comment: comment, // Додаємо всі додаткові дані у коментар
     };
 
     return this.httpClient.post(url, requestBody);

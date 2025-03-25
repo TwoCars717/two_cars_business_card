@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3577f9c3-24d2-4091-88bd-70ecda5db07b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/firstwork/public/assets/images/quickly-car-select-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/footer/footer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/footer/footer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/main.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/main.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firstwork/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/tailwind.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firstwork/src/app/main/quick-car-select/quick-car-select.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/firstwork/src/app/main/quick-car-select/quick-car-select.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +76,23 @@
       <workItem from="1742572197731" duration="1428000" />
       <workItem from="1742750325778" duration="2737000" />
       <workItem from="1742762315422" duration="8084000" />
-      <workItem from="1742812912795" duration="15773000" />
+      <workItem from="1742812912795" duration="16269000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

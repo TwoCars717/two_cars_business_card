@@ -46,9 +46,6 @@ export class QuickCarSelectComponent implements OnInit {
     if (this.carForm.valid) {
       console.log(this.carForm.value);
       this.formCarSubmitEvent.emit(this.carForm);
-      alert('Заявку надіслано!');
-      this.carForm.reset();
-
     } else {
       // Позначити всі поля як touched для відображення помилок
       Object.keys(this.carForm.controls).forEach(key => {
