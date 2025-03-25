@@ -46,7 +46,7 @@ export class MainService {
       form: environment.crmApikey,
       fName: name,
       phone: phone,
-      comment: comment,
+      lName: comment,
       prodex24source: "Веб-сайт TWOCARS",
       getResultData: 1,
     };

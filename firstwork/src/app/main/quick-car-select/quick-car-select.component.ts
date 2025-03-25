@@ -1,5 +1,6 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { TicketStatus } from '../models/ticketStatus';
 
 @Component({
   selector: 'app-quick-car-select',
@@ -9,6 +10,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 export class QuickCarSelectComponent implements OnInit {
   @Output() formCarSubmitEvent = new EventEmitter<FormGroup>();
+  @Input() ticketStatus: TicketStatus = TicketStatus.NotSent;
 
   carForm!: FormGroup;
   currentYear = new Date().getFullYear();
