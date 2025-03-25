@@ -15,15 +15,17 @@
             <label class="text-white" for="name">Ім'я</label>
             <input
                 class="w-full rounded-md py-3 px-4 my-2 text-gray-100 bg-gray-800 text-sm border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none"
-                placeholder="Іван" id="name" type="text" formControlName="name">
-          <div *ngIf="nameControl?.errors?.['required']">Ім'я обов'язкове</div>
-          <div *ngIf="nameControl?.errors?.['minlength']">Ім'я повинно містити щонайменше 2 символи</div>
+                placeholder="Введіть ваше ім'я" id="name" type="text" formControlName="name">
+            <div *ngIf="nameControl?.invalid && nameControl?.touched" class="text-red-500">
+              <div *ngIf="nameControl?.errors?.['required']">Ім'я обов'язкове</div>
+              <div *ngIf="nameControl?.errors?.['minlength']">Ім'я повинно містити щонайменше 2 символи</div>
+            </div>
 
             <!-- Phone number field  -->
             <label class="text-white" for="phoneNumber">Номер телефону</label>
             <input
                 class="w-full rounded-md py-3 px-4 my-2 text-gray-100 bg-gray-800 text-sm border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none"
-                placeholder="+380689999999" id="phoneNumber" type="text" formControlName="phoneNumber">
+                placeholder="+380XXXXXXXXX" id="phoneNumber" type="text" formControlName="phoneNumber">
 
             <div *ngIf="phoneControl?.invalid && phoneControl?.touched" class="text-red-500">
               Введіть коректний український номер телефону у форматі +380XXXXXXXXX
