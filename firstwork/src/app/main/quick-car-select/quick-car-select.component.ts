@@ -58,7 +58,8 @@ export class QuickCarSelectComponent implements OnInit {
   }
 
   onTouchStart(event: Event) {
-      this.onSubmit();
+    event.preventDefault()
+    this.onSubmit();
   }
 
   // Хелпери для валідації
