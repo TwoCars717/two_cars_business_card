@@ -49,7 +49,8 @@ export class PurchasedCarsGridComponent implements OnInit {
   }
 
   private checkScreenSize() {
-    this.isLessXl = window.innerWidth < 1280;
+    if (typeof window !== 'undefined')
+      this.isLessXl = window.innerWidth < 1280;
   }
 
   handleButtonClick() {

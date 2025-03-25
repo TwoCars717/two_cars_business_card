@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, Validators } from '@angular/forms';
+import {AbstractControl, FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { TicketStatus } from '../models/ticketStatus';
 
 @Component({
@@ -46,26 +46,19 @@ export class ContactUsComponent {
   @Output() formSubmitEvent = new EventEmitter<FormGroup>();
   @Input() ticketStatus: TicketStatus = TicketStatus.NotSent;
 
-  contactUsForm = new FormGroup({
-    name: new FormControl('', {
-      validators: [Validators.required, Validators.minLength(2), Validators.maxLength(32)],
-      updateOn: 'blur'
-    }),
-    phoneNumber: new FormControl('', {
-      validators: [
-        Validators.required,
-      ],
-      updateOn: 'blur'
-    })
-  });
+  contactUsForm!: FormGroup;
 
-  get nameControl(): AbstractControl | null {
-    return this.contactUsForm.get('name');
+  constructor(private fb: FormBuilder) { }
+
+  ngOnInit(): void {
+    this.contactUsForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      phoneNumber: ['+380', [Validators.required, Validators.pattern(/^\+380\d{9}$/)]]
+    });
   }
 
-  get phoneControl(): AbstractControl | null {
-    return this.contactUsForm.get('phoneNumber');
-  }
+  get nameControl() { return this.contactUsForm.get('name'); }
+  get phoneControl() { return this.contactUsForm.get('phoneNumber'); }
 
   onSubmit() {
     this.formSubmitEvent.emit(this.contactUsForm);

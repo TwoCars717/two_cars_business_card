@@ -17,12 +17,14 @@ export class HeroSectionComponent implements OnInit {
   }
 
   private preloadVideo() {
-    const video = new Image();
-    video.src = this.videoSrc;
+    if (typeof window !== 'undefined') {
+      const video = new Image();
+      video.src = this.videoSrc;
 
-    const preloadVideo = document.createElement('video');
-    preloadVideo.src = this.videoSrc;
-    preloadVideo.load();
+      const preloadVideo = document.createElement('video');
+      preloadVideo.src = this.videoSrc;
+      preloadVideo.load();
+    }
   }
 
   onVideoCanPlay() {

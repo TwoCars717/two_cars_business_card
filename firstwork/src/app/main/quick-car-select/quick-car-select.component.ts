@@ -23,11 +23,6 @@ export class QuickCarSelectComponent implements OnInit {
     { value: 'Мінівен', label: 'Мінівен' },
     { value: 'Кабріолет', label: 'Кабріолет' },
     { value: 'Пікап', label: 'Пікап' },
-    { value: 'Лімузин', label: 'Лімузин' },
-    { value: 'Ліфтбек', label: 'Ліфтбек' },
-    { value: 'Родстер', label: 'Родстер' },
-    { value: 'Фастбек', label: 'Фастбек' },
-    { value: 'Мікровен', label: 'Мікровен' }
   ];
 
   constructor(private fb: FormBuilder) { }

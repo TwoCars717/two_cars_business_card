@@ -51,7 +51,8 @@ export class CarouselCustomerComponent implements OnInit, OnDestroy, AfterViewIn
 
   ngAfterViewInit() {
     setTimeout(() => {
-      this.initializeSplide();
+      if (typeof document !== 'undefined')
+        this.initializeSplide();
     });
   }
 

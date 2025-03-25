@@ -46,7 +46,8 @@ export class MainComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.animateBox()
+    if (typeof document !== 'undefined')
+      this.animateBox()
   }
 
   animateBox() {
