@@ -15,7 +15,7 @@
         <div class="mb-4 w-full lg:w-1/3 w-1/1">
           <label for="bodyType" class="block text-sm font-medium text-white">Тип кузова</label>
           <select id="bodyType" name="bodyType" formControlName="bodyType"
-                  class="w-full mt-2 p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none">
+                  class="w-full h-[42px] mt-2 p-2 rounded-lg text-gray-100 bg-gray-800 border border-cyan-500 focus:drop-shadow-[0_0_8px_#3ef8f5] transition-all outline-none">
             <option value="" disabled selected>Оберіть тип кузова</option>
             <option *ngFor="let type of bodyTypes" [value]="type.value">{{ type.label }}</option>
           </select>
