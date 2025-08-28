@@ -49,6 +49,8 @@ export class ConfirmationComponent {
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       this.ticketStatus = params['status'] as TicketStatus;
+      // @ts-ignore: Unreachable code error
+      fbq('track', 'Lead');
       console.log(this.ticketStatus);
     });
   }
